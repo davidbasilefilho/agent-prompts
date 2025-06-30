@@ -35,3 +35,9 @@ All prompt files should follow a consistent naming convention to ensure they are
     *   `generate_unit_tests_prompt.md`
     *   `database_schema_design_prompt.md`
     *   `code_explanation_prompt.md`
+
+## 4. Git Commit Messages
+
+When preparing a Git commit message, refer to the `git_commit_prompt.md` for guidelines on creating clear, concise, and informative commit messages. This ensures consistency and adherence to project standards.
+
+*   **Reference:** `git_commit_prompt.md`
