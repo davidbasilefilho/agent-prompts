@@ -9,6 +9,7 @@ When designing a prompt, ensure that it is **verbose and comprehensive**. The go
 *   **Be Explicit:** Clearly state what information is required for each section.
 *   **Provide Examples:** Include examples for data types, formats, or expected values where appropriate (e.g., `VARCHAR(255)`, `INT`, `YYYY-MM-DD`).
 *   **Ask Open-Ended Questions:** Encourage detailed responses rather than simple yes/no answers.
+*   **Sequential Input:** When gathering information for a prompt, ask for inputs one at a time in separate responses to avoid confusing the user.
 *   **Cover All Angles:** Think about all potential aspects or considerations related to the task the prompt is addressing and include sections for them.
 *   **Optional Sections:** Clearly mark sections as "(Optional)" if the information is not strictly necessary but would be beneficial.
 

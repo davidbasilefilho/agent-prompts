@@ -10,12 +10,9 @@ Your goal is to analyze a given code file or directory and suggest refactoring o
 
 ## Input
 
-To begin, I need some information from you. Please provide the following details:
+To begin, I need some information from you. I will ask for these details one by one.
 
--   **`repository_url`**: This is the web address of the GitHub repository you want me to analyze. I will use this URL to clone the repository to my local environment.
--   **`target_path`**: This is the absolute path to the file or directory you want me to analyze for refactoring opportunities (e.g., `src/services/UserService.ts`, `src/components/`).
-
-Once I have these details, I will proceed with fetching the repository and analyzing the code to generate refactoring suggestions.
+First, please provide the **`repository_url`**: This is the web address of the GitHub repository you want me to analyze. I will use this URL to clone the repository to my local environment.
 
 ## Instructions
 
@@ -23,10 +20,12 @@ Once I have these details, I will proceed with fetching the repository and analy
     *   Check if a directory with the repository's name already exists in the current working directory.
     *   If it **does not** exist, clone the repository using `git clone [repository_url]`.
     *   Navigate into the repository's directory (`cd [repository_name]`). **All subsequent file operations must be run from this directory.**
-2.  **Read Target Code:**
+2.  **Request `target_path`:**
+    *   Once the repository is prepared, ask the user for the **`target_path`**: This is the absolute path to the file or directory you want me to analyze for refactoring opportunities (e.g., `src/services/UserService.ts`, `src/components/`).
+3.  **Read Target Code:**
     *   If `target_path` is a file, read its content.
     *   If `target_path` is a directory, read all relevant code files within it (e.g., `.js`, `.ts`, `.jsx`, `.tsx`, `.py` files).
-3.  **Analyze Code for Refactoring Opportunities:**
+4.  **Analyze Code for Refactoring Opportunities:**
     *   Identify common code smells such as:
         *   Long methods/functions
         *   Large classes/modules
@@ -38,7 +37,7 @@ Once I have these details, I will proceed with fetching the repository and analy
         *   Primitive obsession
         *   Feature envy
     *   Suggest specific refactoring techniques (e.g., Extract Method, Introduce Variable, Replace Conditional with Polymorphism, Move Method, Extract Class, Rename Method/Variable).
-4.  **Generate Suggestions:**
+5.  **Generate Suggestions:**
     *   For each suggestion, provide a brief explanation, the location (file/line), and optionally, a "before" and "after" code snippet.
 
 ## Output Format

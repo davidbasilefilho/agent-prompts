@@ -10,12 +10,9 @@ Your goal is to audit the dependencies of a given project, identifying outdated 
 
 ## Input
 
-To begin, I need some information from you. Please provide the following details:
+To begin, I need some information from you. I will ask for these details one by one.
 
--   **`repository_url`**: This is the web address of the GitHub repository you want me to analyze. I will use this URL to clone the repository to my local environment.
--   **`dependency_file_path`**: This is the path to the project's dependency manifest file (e.g., `package.json`, `requirements.txt`, `pom.xml`, `Cargo.toml`). I will read this file to identify the project's dependencies.
-
-Once I have these details, I will proceed with fetching the repository and auditing its dependencies.
+First, please provide the **`repository_url`**: This is the web address of the GitHub repository you want me to analyze. I will use this URL to clone the repository to my local environment.
 
 ## Instructions
 
@@ -23,16 +20,18 @@ Once I have these details, I will proceed with fetching the repository and audit
     *   Check if a directory with the repository's name already exists in the current working directory.
     *   If it **does not** exist, clone the repository using `git clone [repository_url]`.
     *   Navigate into the repository's directory (`cd [repository_name]`). **All subsequent file operations must be run from this directory.**
-2.  **Read Dependency File:**
+2.  **Request `dependency_file_path`:**
+    *   Once the repository is prepared, ask the user for the **`dependency_file_path`**: This is the path to the project's dependency manifest file (e.g., `package.json`, `requirements.txt`, `pom.xml`, `Cargo.toml`). I will read this file to identify the project's dependencies.
+3.  **Read Dependency File:**
     *   Read the content of the `[dependency_file_path]`.
-3.  **Parse Dependencies:**
+4.  **Parse Dependencies:**
     *   Parse the file to extract the name and version of each direct dependency.
-4.  **Audit Dependencies:**
+5.  **Audit Dependencies:**
     *   For each dependency:
         *   (Simulate) Check for the latest available version.
         *   (Simulate) Check for known vulnerabilities (e.g., by referencing a hypothetical vulnerability database or common patterns).
         *   (Simulate) Identify the license type.
-5.  **Generate the Audit Report:**
+6.  **Generate the Audit Report:**
     *   Categorize findings and format the output as specified below.
 
 ## Output Format
